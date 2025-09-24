@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<StoreContext>(
-    options => options.UseSqlite("datasource='data.db'")
+    options => options.UseNpgsql("Server=localhost; user id=postgres; password=password")
 );
 
 var app = builder.Build();
